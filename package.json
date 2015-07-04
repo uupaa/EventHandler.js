@@ -1,7 +1,7 @@
 {
   "name": "uupaa.eventhandler.js",
-  "version": "0.0.0",
-  "description": "DOM like event handler class.",
+  "version": "0.0.1",
+  "description": "Event handler class.",
   "url": "https://github.com/uupaa/EventHandler.js",
   "keywords": ["uupaa", "WebModule", "Unstable"],
   "repository": {

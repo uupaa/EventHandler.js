@@ -2,7 +2,7 @@
 
 [![npm](https://nodei.co/npm/uupaa.eventhandler.js.svg?downloads=true&stars=true)](https://nodei.co/npm/uupaa.eventhandler.js/)
 
-DOM like event handler class.
+Event handler class.
 
 - EventHandler.js made of [WebModule](https://github.com/uupaa/WebModule).
 - [Spec](https://github.com/uupaa/EventHandler.js/wiki/EventHandler)
