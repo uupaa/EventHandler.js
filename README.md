@@ -2,7 +2,7 @@
 
 [![npm](https://nodei.co/npm/uupaa.eventhandler.js.svg?downloads=true&stars=true)](https://nodei.co/npm/uupaa.eventhandler.js/)
 
-Event handler class.
+Geniric Event Handler.
 
 - Please refer to [Spec](https://github.com/uupaa/EventHandler.js/wiki/) and [API Spec](https://github.com/uupaa/EventHandler.js/wiki/EventHandler) links.
 - The EventHandler.js is made of [WebModule](https://github.com/uupaa/WebModule).
