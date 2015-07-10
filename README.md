@@ -4,8 +4,8 @@
 
 Event handler class.
 
-- EventHandler.js made of [WebModule](https://github.com/uupaa/WebModule).
-- [Spec](https://github.com/uupaa/EventHandler.js/wiki/EventHandler)
+- Please refer to [Spec](https://github.com/uupaa/EventHandler.js/wiki/) and [API Spec](https://github.com/uupaa/EventHandler.js/wiki/EventHandler) links.
+- The EventHandler.js is made of [WebModule](https://github.com/uupaa/WebModule).
 
 ## Browser and NW.js(node-webkit)
 
@@ -13,7 +13,19 @@ Event handler class.
 <script src="<module-dir>/lib/WebModule.js"></script>
 <script src="<module-dir>/lib/EventHandler.js"></script>
 <script>
-    ...
+    function a1(event) {
+        console.log("call a1. detail: " + JSON.stringify(event.detail));
+    }
+    function a2(event) {
+        console.log("call a2. detail: " + JSON.stringify(event.detail));
+    }
+
+    var event = new EventHandler(["type-a", "type-b"]);
+
+    event.on("type-a", a1);
+    event.on("type-a", a2);
+    event.fire("type-a", { foo: 1 });
+    event.clear();
 </script>
 ```
 
@@ -23,6 +35,7 @@ Event handler class.
 importScripts("<module-dir>lib/WebModule.js");
 importScripts("<module-dir>lib/EventHandler.js");
 
+...
 ```
 
 ## Node.js
@@ -31,5 +44,6 @@ importScripts("<module-dir>lib/EventHandler.js");
 require("<module-dir>lib/WebModule.js");
 require("<module-dir>lib/EventHandler.js");
 
+...
 ```
 

@@ -19,7 +19,7 @@ var test = new Test("EventHandler", {
         testEventHandler_on,
         testEventHandler_off,
         testEventHandler_off_type,
-        testEventHandler_has,
+        testEventHandler_know,
         testEventHandler_list,
         testEventHandler_fire,
         testEventHandler_fire_detail,
@@ -129,13 +129,13 @@ function testEventHandler_off_type(test, pass, miss) {
 }
 
 
-function testEventHandler_has(test, pass, miss) {
+function testEventHandler_know(test, pass, miss) {
 
     function a1() { }
     function a2() { }
     function b1() { }
 
-    var task = new Task("testEventHandler_has", 1, function(error, buffer) {
+    var task = new Task("testEventHandler_know", 1, function(error, buffer) {
         if (error) {
             test.done(miss());
         } else {
@@ -149,8 +149,9 @@ function testEventHandler_has(test, pass, miss) {
     event.on("a", a2);
     event.on("b", b1);
 
-    if ( event.has("a") &&
-         event.has("b") ) {
+    if ( event.know("a") &&
+         event.know("b") &&
+        !event.know("z") ) {
         task.pass();
     } else {
         task.miss();
@@ -257,8 +258,7 @@ function testEventHandler_clear(test, pass, miss) {
     event.on("a", a2);
     event.on("b", b1);
 
-    event.clear("a");
-    event.clear("b");
+    event.clear();
 
     task.pass();
 }
